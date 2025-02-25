@@ -31,6 +31,8 @@ Dependencies are managed automatically by Docker. Compatibility with macOS/Linux
 git clone https://github.com/Harolpddeboer/hyptotheek.git
 ```
 
+Use EXAMPLE.env to see how to use the .env file.
+
 #### Docker setup
 
 http://localhost:9000/ for the application.
