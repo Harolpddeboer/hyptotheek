@@ -31,7 +31,7 @@ Dependencies are managed automatically by Docker. Compatibility with macOS/Linux
 git clone https://github.com/Harolpddeboer/hyptotheek.git
 ```
 
-Use EXAMPLE.env to see how to use the .env file.
+RENAME EXAMPLE.env TO .env AND place in laravel-app. Set the API_KEY to your key.
 
 #### Docker setup
 
