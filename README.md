@@ -40,7 +40,14 @@ http://localhost:9001/index.php?route=/ for phpmyadmin.
 
 ```bash
 // Build the docker container
+1.
 docker-compose build --no-cache --force-rm
+
+2.
+docker-compose up -d
+
+3.
+docker exec laravel-docker bash -c "composer install"
 
 // Run database migrations/seed
 docker exec laravel-docker bash -c "php artisan migrate"
