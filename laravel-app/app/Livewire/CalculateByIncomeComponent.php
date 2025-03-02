@@ -31,7 +31,7 @@ class CalculateByIncomeComponent extends Component implements HasForms
         // Prefilled form data for easier assesment testing.
         $this->form->fill([
             'calculation_date' => '2025-02-24',
-            'nhg' => 'false',
+            'nhg' => true,
             'duration' => 360,
             'percentage' => 1.501, // Specific Percentage requested.
             'rate_fixation' => 10,
