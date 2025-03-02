@@ -131,12 +131,6 @@ Access the application via the development server URL (e.g., http://localhost:90
 
 ## Remarks:
 
-#### Errors
-
-I couldn't figure out why the Livewire routing/update wasn't working in time.
-
-As a result, I made the API call execute by default. It might work for you. The calculate button uses the same routing.
-
 #### What I could've done better
 
 1. The 2 components that handle API requests are very similar, and contain duplicate code. Theres probably a neater way but I figured it's better like this for the assesment.
