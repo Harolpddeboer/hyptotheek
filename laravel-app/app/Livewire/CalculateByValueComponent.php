@@ -35,9 +35,6 @@ class CalculateByValueComponent extends Component implements HasForms
             'not_deductible' => 0,
             'onlyUseIncludedLabels' => false,
         ]);
-
-        // Force submit on pageload. 
-        $this->submit();
     }
 
     // This form will be renderd inside the blade, Called like this: {{ $this->form }}.
