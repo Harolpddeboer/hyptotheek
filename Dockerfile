@@ -18,5 +18,6 @@ RUN a2enmod rewrite
 USER root
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+EXPOSE 9000
 EXPOSE 80
 CMD ["apache2-foreground"]
