@@ -59,9 +59,6 @@ class CalculateByIncomeComponent extends Component implements HasForms
                 ],
             ],
         ]);
-
-        // Force submit on pageload. 
-        $this->submit();
     }
 
     // This form will be renderd inside the blade, Called like this: {{ $this->form }}.
