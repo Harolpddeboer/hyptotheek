@@ -81,12 +81,13 @@ class CalculateByIncomeComponent extends Component implements HasForms
         $this->form->getState();
 
         // Convert boolean to string to prevent API errors.
-        $this->incomeData['nhg'] = ($this->incomeData['nhg'] === 0) ? 'false' : 'true';
+        $validatedData = $this->incomeData;
+        $validatedData['nhg'] = ($validatedData['nhg'] === 0) ? 'false' : 'true';
 
         try {
             // API request setup using Saloon.
             $connector = new MortageConnector();
-            $response = $connector->send(new MortageByIncomeRequest($this->incomeData, $this->apiKey));
+            $response = $connector->send(new MortageByIncomeRequest($validatedData, $this->apiKey));
 
             // Read API response
             $data = json_decode($response->body(), true);
