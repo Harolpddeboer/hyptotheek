@@ -57,12 +57,13 @@ class CalculateByValueComponent extends Component implements HasForms
         $this->form->getState();
 
         // Convert boolean to string to prevent API errors.
-        $this->incomeData['onlyUseIncludedLabels'] = ($this->incomeData['onlyUseIncludedLabels'] === 0) ? 'false' : 'true';
+        $validatedData = $this->incomeData;
+        $validatedData['onlyUseIncludedLabels'] = ($validatedData['onlyUseIncludedLabels'] === 0) ? 'false' : 'true';
 
         try {
             // API request setup using Saloon.
             $connector = new MortageConnector();
-            $response = $connector->send(new MortageByValueRequest($this->incomeData, $this->apiKey));
+            $response = $connector->send(new MortageByValueRequest($validatedData, $this->apiKey));
             
             // Read API response
             $data = json_decode($response->body(), true);
