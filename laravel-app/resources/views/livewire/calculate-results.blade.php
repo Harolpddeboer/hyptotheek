@@ -18,7 +18,7 @@
         </div>
 
         <!-- Display max mortgage if available -->
-        <div class="w-1/2">
+        <div  wire:loading.remove class="w-1/2">
             @if(isset($this->maxMortgage) && $this->maxMortgage)
                 <div class="mt-8 p-6 bg-green-600 text-white rounded-lg shadow-lg">
                     <strong class="text-lg">Max Mortgage:</strong>
