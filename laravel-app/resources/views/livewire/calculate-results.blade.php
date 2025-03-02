@@ -53,7 +53,12 @@
 
         <!-- Submit Button -->
         <div class="mt-6 absolute bottom-6 right-6">
-            <button type="button" 
+            <!-- Loading indicator -->
+            <div wire:loading class="">
+                Loading results...
+            </div>
+
+            <button wire:loading.remove type="button" 
                 wire:click="submit" 
                 class="bg-orange-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition duration-200 flex items-center justify-center space-x-2">
                 <x-heroicon-o-paper-airplane class="w-5 h-5"/>
